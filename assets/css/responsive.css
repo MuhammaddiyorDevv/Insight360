@@ -1,0 +1,79 @@
+/* Responsive Design */
+
+
+/* Tablet */
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 32px;
+        --font-size-3xl: 28px;
+        --spacing-2xl: 40px;
+    }
+    
+    .navbar .container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .hero {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .features-grid,
+    .modules-grid,
+    .segments-grid,
+    .compare-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero h1 {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero p {
+        font-size: var(--font-size-lg);
+    }
+    
+    .feature-card,
+    .module-card,
+    .segment-card,
+    .testimonial-card,
+    .compare-item {
+        padding: var(--spacing-md);
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    section h2 {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .features-grid,
+    .modules-grid,
+    .segments-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
