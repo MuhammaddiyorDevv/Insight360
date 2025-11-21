@@ -1,29 +1,28 @@
 /* Segments Section */
 .segments {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .segments-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--spacing-lg);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .segment-card {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #20b859 100%);
-    color: white;
-    padding: var(--spacing-lg);
-    border-radius: var(--border-radius-lg);
-    text-align: center;
-    transition: transform 0.3s ease;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #20b859 100%);
+  color: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .segment-card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .segment-card h3 {
-    font-size: var(--font-size-xl);
-    margin-bottom: var(--spacing-sm);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-sm);
 }
-
