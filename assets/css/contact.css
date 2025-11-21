@@ -1,44 +1,43 @@
 /* Contact Section */
 .contact {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: var(--spacing-xs);
-    font-weight: 600;
-    color: var(--text-color);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: var(--spacing-sm);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    font-family: var(--font-family);
-    font-size: var(--font-size-base);
-    transition: border-color 0.3s ease;
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 .form-group textarea {
-    resize: vertical;
-    min-height: 120px;
+  resize: vertical;
+  min-height: 120px;
 }
-
