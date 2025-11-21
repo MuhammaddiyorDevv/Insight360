@@ -122,9 +122,6 @@
   display: none;
 }
 @media (max-width: 800px) {
-  .nav-menu {
-    display: none;
-  }
   .logo {
     display: flex;
     align-items: start;
@@ -133,10 +130,13 @@
   .hamburger {
     display: block;
   }
-}
-@media (max-width: 375px) {
   .lang-selector,
   .btn-demo {
+    display: none;
+  }
+}
+@media (max-width: 1280px) {
+  .nav-menu {
     display: none;
   }
 }
