@@ -107,8 +107,8 @@
 
 .hero-image {
   display: flex;
-  justify-content: center;
-  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   background-image: url("../images/Hero-Img.png");
   background-size: contain;
@@ -118,9 +118,12 @@
   width: 100%;
 }
 
+.hero-image > div:not(:first-child) {
+  align-self: flex-start;
+}
+
 .chart-card {
-  position: absolute;
-  display: none;
+  align-self: flex-end;
   width: 268px;
   background: rgba(255, 255, 255, 0.847);
   backdrop-filter: blur(3px);
@@ -178,7 +181,6 @@
   border-radius: 16px;
   padding: 24px;
   overflow: hidden;
-  display: none;
 }
 
 .bar-chart-card::before {
