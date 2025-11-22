@@ -1,10 +1,3 @@
-/* Features Section */
-.features-container {
-  max-width: 1396px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
 .features h2 {
   font-weight: 400;
   color: var(--primary-color);
@@ -14,7 +7,7 @@
 
 .features-subtitle {
   font-weight: 400;
-  color: #4B5563;
+  color: #4b5563;
   font-size: 24px;
   text-align: center;
 }
@@ -24,28 +17,33 @@
   grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
+  width: 100%;
 }
 
 .feature-card {
   background-color: var(--bg-color);
   padding: var(--spacing-lg);
   border-radius: var(--border-radius-lg);
+  border: 1px solid #e2e8f0;
   box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .feature-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
   height: 50%;
-  background-image: url('../images/AllesCardBackground.svg');
+  background-image: url("../images/AllesCardBackground.svg");
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
@@ -66,7 +64,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-md);
   position: relative;
   z-index: 1;
 }
@@ -78,9 +75,8 @@
 }
 
 .feature-card h3 {
-  font-size:18px;
+  font-size: 18px;
   font-weight: 400;
-  margin-bottom: 10px;
   color: #020817;
   position: relative;
   z-index: 1;
@@ -91,22 +87,17 @@
   font-weight: 400;
   color: #64748b;
   line-height: 1.6;
-  margin: 0;
   text-align: left;
   position: relative;
   z-index: 1;
 }
 
-/* Responsive Styles */
-
-/* Large Desktop */
-@media (min-width: 1201px) {
+@media (min-width: 1280px) {
   .features-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Desktop to Tablet */
 @media (max-width: 1200px) and (min-width: 1025px) {
   .features-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -114,7 +105,6 @@
   }
 }
 
-/* Tablet */
 @media (max-width: 1024px) and (min-width: 769px) {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);

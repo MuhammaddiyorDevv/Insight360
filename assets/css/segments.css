@@ -57,14 +57,13 @@
 
 .segment-card {
   background-color: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: var(--border-radius-lg);
   padding: 20px 21px 0px 21px;
   display: flex;
   align-items: start;
-  gap: 0;
   transition: transform 0.3s ease;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 611px;
   width: 100%;
 }
