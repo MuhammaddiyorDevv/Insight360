@@ -36,14 +36,13 @@ body {
   background-color: transparent;
 }
 
-/* Sections */
 section {
   padding: var(--spacing-2xl) 0;
 }
 
 section h2 {
   font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-xl);
+  /* margin-bottom: var(--spacing-xl); */
   text-align: center;
   color: var(--text-color);
 }
