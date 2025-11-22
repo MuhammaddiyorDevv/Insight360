@@ -4,7 +4,12 @@
 .benchmark-wrapper {
   background-color: white;
   border-radius: 32px;
-  padding: 235px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1394px;
+  height: 318px;
+  margin: auto;
 }
 
 .hero-container {
