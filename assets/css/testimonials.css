@@ -64,6 +64,12 @@
   .testimonial-desc {
     font-size: 14px;
   }
+  .testimonial-title {
+    font-size: 32px;
+  }
+  .testimonial-info {
+    font-size: 18px;
+  }
 }
 @media (max-width: 800px) {
   .testimonials-grid {
@@ -87,5 +93,11 @@
 
   .testimonials-grid::-webkit-scrollbar {
     display: none;
+  }
+  .testimonial-title {
+    font-size: 24px;
+  }
+  .testimonial-info {
+    font-size: 16px;
   }
 }
