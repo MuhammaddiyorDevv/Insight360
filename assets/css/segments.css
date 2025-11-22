@@ -1,4 +1,3 @@
-/* Segments Section */
 .segments {
   padding: var(--spacing-2xl) 0;
 }
@@ -11,8 +10,7 @@
 }
 
 .segments-content {
-  padding: var(--spacing-xl) 100px var(--spacing-xl) 100px;
-  background-image: url('../images/HomeImg.png');
+  background-image: url("../images/HomeImg.png");
   background-size: contain;
   background-position: right center;
   background-repeat: no-repeat;
@@ -26,18 +24,23 @@
   position: relative;
   z-index: 2;
 }
+.segment-head {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 
 .segments h2 {
   color: var(--primary-color);
   font-size: var(--font-size-4xl);
   font-weight: 400;
   text-align: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
 }
 
 .segments-subtitle {
-  color: #9CA3AF;
-  font-size: var(--font-size-lg);
+  color: #4b5563;
+  font-size: var(--font-size-2xl);
   text-align: center;
   margin-bottom: var(--spacing-lg);
 }
@@ -45,9 +48,8 @@
 .segments-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-lg);
-  max-width: 70%;
-  margin: 0;
+  gap: 30px;
+  max-width: 1253px;
   position: relative;
   z-index: 1;
   justify-items: start;
@@ -56,15 +58,15 @@
 .segment-card {
   background-color: #ffffff;
   border-radius: var(--border-radius-lg);
-  padding: 0;
+  padding: 20px 21px 0px 21px;
   display: flex;
+  align-items: start;
   gap: 0;
   transition: transform 0.3s ease;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-height: 220px;
+  max-width: 611px;
   width: 100%;
-  max-width: 500px;
 }
 
 .segment-card:hover {
@@ -74,11 +76,11 @@
 
 .segment-image {
   flex: 0 0 auto;
-  width: 180px;
-  height: 165px;
+  width: 200px;
+  height: 184px;
   align-items: center;
   overflow: hidden;
-  border-radius: var(--border-radius-lg) 0 0 var(--border-radius-lg);
+  border-radius: 12px;
   position: relative;
 }
 
@@ -99,256 +101,83 @@
 }
 
 .segment-content h3 {
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: var(--spacing-xs);
-  line-height: 1.2;
+  font-size: var(--font-size-2xl);
+  font-weight: 400;
+  color: #020817;
 }
 
 .segment-tagline {
-  color: var(--primary-color);
-  font-size: var(--font-size-base);
-  font-weight: 600;
+  color: var(--secondary-color);
+  font-size: 17px;
+  font-weight: 400;
   margin-bottom: var(--spacing-sm);
   line-height: 1.4;
 }
 
 .segment-description {
   color: #64748b;
-  font-size: var(--font-size-base);
+  font-size: 15px;
   margin-bottom: var(--spacing-sm);
-  line-height: 1.4;
 }
 
 .segment-btn {
   background-color: var(--secondary-color);
   color: #ffffff;
   border: none;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border-radius: var(--border-radius);
+  border-radius: 6px;
+  height: 48px;
   font-size: var(--font-size-base);
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   transition: background-color 0.3s ease;
   align-self: flex-start;
   white-space: nowrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  width: 340px;
+  max-width: 100%;
 }
 
 .segment-btn:hover {
   background-color: var(--primary-hover);
 }
 
-/* Responsive Design */
-/* Medium screens - kartalar yonma-yon bo'lmasa */
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
   .segment-card {
     flex-direction: column;
-    max-height: none;
+    padding: 20px;
   }
-
+  .segment-content {
+    width: 326px;
+  }
   .segment-image {
     width: 100%;
-    height: 250px;
-    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
   }
-
-  .segment-image img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .segment-content h3 {
-    font-size: var(--font-size-lg);
-  }
-
-  .segment-tagline {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-description {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-btn {
-    font-size: 13px;
-    padding: var(--spacing-xs) var(--spacing-md);
-    white-space: normal;
-    line-height: 1.4;
+  .segments-grid {
+    grid-gap: 30px;
+    width: 762px;
   }
 }
-
-/* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .segments-content {
-    padding: var(--spacing-lg) var(--spacing-lg);
-    background-size: contain;
-    background-position: right center;
+    background-image: none;
   }
-
   .segments h2 {
-    font-size: var(--font-size-3xl);
+    font-size: 32px;
   }
-
   .segments-subtitle {
-    font-size: var(--font-size-base);
+    font-size: 18px;
   }
-  
-  .segment-card {
-    max-height: none;
-  }
-
+}
+@media (max-width: 800px) {
   .segments-grid {
     grid-template-columns: 1fr;
-    max-width: 100%;
+    width: 343px;
   }
-
-  .segment-card {
-    flex-direction: column;
-  }
-
-  .segment-image {
-    width: 100%;
-    height: 250px;
-    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
-  }
-
-  .segment-image img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .segment-content {
-    padding: var(--spacing-md);
-  }
-
-  .segment-content h3 {
-    font-size: var(--font-size-lg);
-  }
-
-  .segment-tagline {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-description {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-btn {
-    font-size: 12px;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    white-space: normal;
-    line-height: 1.4;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .segments-content {
-    padding: var(--spacing-md) var(--spacing-md);
-    background-size: contain;
-    background-position: right center;
-  }
-
   .segments h2 {
-    font-size: var(--font-size-2xl);
+    font-size: 24px;
   }
-
   .segments-subtitle {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-content {
-    padding: var(--spacing-sm);
-  }
-
-  .segment-content h3 {
-    font-size: var(--font-size-base);
-  }
-
-  .segment-tagline {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-description {
-    font-size: var(--font-size-sm);
-    line-height: 1.3;
-  }
-
-  .segment-card {
-    flex-direction: column;
-  }
-
-  .segment-image {
-    width: 100%;
-    height: 200px;
-    border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0;
-  }
-
-  .segment-btn {
-    font-size: 11px;
-    padding: var(--spacing-xs) var(--spacing-sm);
-    white-space: normal;
-    width: 100%;
-    text-align: center;
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 480px) {
-  .segments-content {
-    padding: var(--spacing-sm) var(--spacing-sm);
-    background-size: contain;
-    background-position: right center;
-  }
-
-  .segments h2 {
-    font-size: var(--font-size-2xl);
-  }
-
-  .segments-subtitle {
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-lg);
-  }
-
-  .segment-card {
-    border-radius: var(--border-radius);
-    flex-direction: column;
-  }
-
-  .segment-image {
-    width: 100%;
-    height: 180px;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-  }
-
-  .segment-content {
-    padding: var(--spacing-md);
-  }
-
-  .segment-content h3 {
-    font-size: var(--font-size-lg);
-  }
-
-  .segment-tagline {
-    font-size: var(--font-size-sm);
-  }
-
-  .segment-description {
-    font-size: var(--font-size-sm);
-    margin-bottom: var(--spacing-md);
-  }
-
-  .segment-btn {
-    width: 100%;
-    text-align: center;
-    white-space: normal;
-    padding: 8px var(--spacing-xs);
-    font-size: 10px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    line-height: 1.3;
+    font-size: 16;
   }
 }
