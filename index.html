@@ -780,6 +780,58 @@
           initBarChart();
         }, 500);
 
+        // Hamburger menu toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+        const header = document.querySelector(".header");
+
+        function closeMenu() {
+          navMenu.classList.remove("active");
+          hamburger.classList.remove("active");
+          header.classList.remove("menu-open");
+          document.body.style.overflow = "";
+        }
+
+        function openMenu() {
+          navMenu.classList.add("active");
+          hamburger.classList.add("active");
+          header.classList.add("menu-open");
+          document.body.style.overflow = "hidden";
+        }
+
+        if (hamburger && navMenu) {
+          hamburger.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (navMenu.classList.contains("active")) {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          });
+
+          // Close menu when clicking on a link
+          const navLinks = navMenu.querySelectorAll("a");
+          navLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              closeMenu();
+            });
+          });
+
+          // Close menu when clicking on overlay (header::before)
+          header.addEventListener("click", (e) => {
+            if (e.target === header && header.classList.contains("menu-open")) {
+              closeMenu();
+            }
+          });
+
+          // Close menu on escape key
+          document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && navMenu.classList.contains("active")) {
+              closeMenu();
+            }
+          });
+        }
+
         // Contact form handler
         const contactForm = document.getElementById("contactForm");
         if (contactForm) {
