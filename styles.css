@@ -370,8 +370,9 @@ section h2 {
   border-radius: 8px;
 }
 .btn-mid-border {
-  border: none;
+  border: 2px solid white;
   border-radius: 8px;
+  padding: 2px;
 }
 
 .hero-buttons {
@@ -487,14 +488,20 @@ section h2 {
 }
 
 .energy-icon-circle {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: #16a34a;
+  width: 52px;
+  height: 52px;
+  border-radius: 15.3px;
+  background: transparent;
+  border: 1px solid #FFFFFF14;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+.energy-icon-circle img {
+  width: 24px;
+  height: 24px;
 }
 
 .lightning-icon {
@@ -512,8 +519,8 @@ section h2 {
 }
 
 .energy-percentage {
-  font-size: 36px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 400;
   color: #1f2937;
   line-height: 1;
   margin: 0;
@@ -526,13 +533,13 @@ section h2 {
   line-height: 1.4;
   margin: 0;
   max-width: 100%;
-  word-wrap: break-word;
+  white-space: nowrap;
 }
 
 .chart-title {
   font-size: 18px;
-  font-weight: 500;
-  color: var(--primary-color);
+  font-weight: 400;
+  color: black;
   margin: 0 0 16px 0;
   text-align: left;
 }
@@ -548,7 +555,7 @@ section h2 {
 }
 
 .donut-segment {
-  stroke-linecap: round;
+  stroke-linecap: butt;
   opacity: 1;
   display: block;
 }
@@ -623,6 +630,7 @@ section h2 {
   display: block;
   opacity: 1;
   flex-shrink: 0;
+  margin-top: -10px;
 }
 
 .bar-label {
@@ -1822,7 +1830,7 @@ future style */
     width: auto;
   }
   .features-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .hamburger {
     display: block;
@@ -2195,7 +2203,9 @@ future style */
   }
 }
 @media (min-width: 1200px) {
-  .features-grid,
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
   .modules-grid {
     grid-template-columns: repeat(3, 1fr);
   }

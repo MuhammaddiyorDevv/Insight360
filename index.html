@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Insight360 Landing Page</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/Untitled-1.png" />    <title>Insight360 Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -94,7 +94,6 @@
         </div>
 
         <div class="hero-image">
-          <!-- Chart 1: Yuqori o'ng - Donut Chart -->
           <div class="chart-container chart-top-right">
             <h4 class="chart-title">Gesamtbetriebskosten</h4>
             <svg class="donut-chart" viewBox="0 0 200 200">
@@ -115,7 +114,7 @@
                 fill="none"
                 stroke-width="20"
                 stroke="#7C51F1"
-                stroke-dasharray="167.5 502.65"
+                stroke-dasharray="165.5 502.65"
                 stroke-dashoffset="0"
               />
               <circle
@@ -126,7 +125,7 @@
                 fill="none"
                 stroke-width="20"
                 stroke="#16A34A"
-                stroke-dasharray="167.5 502.65"
+                stroke-dasharray="165.5 502.65"
                 stroke-dashoffset="-167.5"
               />
               <circle
@@ -137,13 +136,12 @@
                 fill="none"
                 stroke-width="20"
                 stroke="#FBBF24"
-                stroke-dasharray="167.5 502.65"
+                stroke-dasharray="165.5 502.65"
                 stroke-dashoffset="-335"
               />
             </svg>
           </div>
 
-          <!-- Chart 2: Chap past - Bar Chart -->
           <div class="chart-container chart-bottom-left">
             <h4 class="chart-title">Monatliche Fertigstellung</h4>
             <div
@@ -156,7 +154,7 @@
                   <div class="bar-unfilled" style="height: 27.5%"></div>
                   <div
                     class="bar-filled bar-1"
-                    style="height: 72.5%; background: #7c51f1"
+                    style="height: 72.5%; background: #7c51f1; border-radius: 12px;"
                   ></div>
                 </div>
                 <span class="bar-label">Nov</span>
@@ -166,7 +164,7 @@
                   <div class="bar-unfilled" style="height: 47.5%"></div>
                   <div
                     class="bar-filled bar-2"
-                    style="height: 52.5%; background: #3b82f6"
+                    style="height: 52.5%; background: #3b82f6; border-radius: 12px;"
                   ></div>
                 </div>
                 <span class="bar-label">Dec</span>
@@ -176,7 +174,7 @@
                   <div class="bar-unfilled" style="height: 37.5%"></div>
                   <div
                     class="bar-filled bar-3"
-                    style="height: 62.5%; background: #06b6d4"
+                    style="height: 62.5%; background: #06b6d4; border-radius: 12px;"
                   ></div>
                 </div>
                 <span class="bar-label">Jan</span>
@@ -186,7 +184,7 @@
                   <div class="bar-unfilled" style="height: 52.5%"></div>
                   <div
                     class="bar-filled bar-4"
-                    style="height: 47.5%; background: #a78bfa"
+                    style="height: 47.5%; background: #a78bfa; border-radius: 12px;"
                   ></div>
                 </div>
                 <span class="bar-label">Feb</span>
@@ -196,7 +194,7 @@
                   <div class="bar-unfilled" style="height: 32.5%"></div>
                   <div
                     class="bar-filled bar-5"
-                    style="height: 67.5%; background: #6366f1"
+                    style="height: 67.5%; background: #6366f1; border-radius: 12px;"
                   ></div>
                 </div>
                 <span class="bar-label">Mar</span>
@@ -204,33 +202,16 @@
             </div>
           </div>
 
-          <!-- Chart 3: O'ng past - Energy Reduction Card -->
           <div class="chart-container chart-bottom-right energy-reduction-card">
             <div class="energy-card-content">
               <div class="energy-icon-circle">
-                <svg
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="lightning-icon"
-                >
-                  <path
-                    d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
-                    fill="white"
-                    stroke="white"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+                <img src="/assets/images/EnergyIcon.png" alt="">
               </div>
               <div class="energy-card-text">
                 <div class="energy-percentage">23%</div>
-                <div class="energy-description">
+                <p class="energy-description">
                   Reduzierung des Energieverbrauchs um 23%
-                </div>
+                </p>
               </div>
             </div>
           </div>
