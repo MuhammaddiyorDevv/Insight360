@@ -958,6 +958,116 @@ section h2 {
   color: inherit;
 }
 
+/* Mobile Table Styles - Two Column Layout */
+@media (max-width: 768px) {
+  .compare-table-wrapper {
+    overflow-x: visible !important;
+    margin-bottom: var(--spacing-md);
+    width: 100% !important;
+  }
+  
+  .compare-table {
+    border: none !important;
+    width: 100% !important;
+    display: block !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+  }
+  
+  .compare-table thead {
+    display: none !important;
+  }
+  
+  .compare-table tbody {
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  .compare-table tr {
+    display: block !important;
+    margin-bottom: 0 !important;
+    width: 100% !important;
+    border: none !important;
+  }
+  
+  .compare-table td {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    padding: var(--spacing-sm) 0 !important;
+    border-bottom: none !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    color: #1e293b !important;
+    text-align: left !important;
+    vertical-align: top !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    gap: var(--spacing-md) !important;
+  }
+  
+  .compare-table td::before {
+    content: attr(data-label) !important;
+    color: var(--secondary-color) !important;
+    font-weight: 400 !important;
+    font-size: var(--font-size-base) !important;
+    text-align: left !important;
+    flex: 0 0 auto !important;
+    min-width: 140px !important;
+    display: block !important;
+  }
+  
+  /* Content on the right side */
+  .compare-table td {
+    flex-wrap: nowrap !important;
+  }
+  
+  .compare-table td > * {
+    flex: 0 0 auto !important;
+    display: inline-block !important;
+    margin-left: 0 !important;
+    text-align: left !important;
+    margin-right: 0 !important;
+  }
+  
+  /* Text content (nodes without children) */
+  .compare-table td {
+    text-align: left !important;
+  }
+  
+  .compare-table .checkmark-icon {
+    color: var(--secondary-color) !important;
+    display: inline-block !important;
+  }
+  
+  .compare-table td .sparkle-icon {
+    margin-right: 4px !important;
+    display: inline-block !important;
+  }
+  
+  /* Advantage section mobile - tepa past */
+  .compare-advantage {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: var(--spacing-md) !important;
+  }
+  
+  .compare-advantage .advantage-checkmark {
+    align-self: flex-start !important;
+  }
+  
+  .compare-advantage .advantage-line1,
+  .compare-advantage .advantage-line2 {
+    font-size: 14px !important;
+  }
+  
+  .compare-card-title {
+    font-size: 18px !important;
+    text-align: center !important;
+  }
+}
+
 .compare-advantage {
   background: linear-gradient(
     180deg,
@@ -975,6 +1085,12 @@ section h2 {
 .compare-advantage .advantage-checkmark {
   width: 40px;
   height: 40px;
+  flex-shrink: 0;
+}
+
+.compare-advantage .advantage-checkmark-icon {
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
 }
 
