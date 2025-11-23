@@ -1,4 +1,3 @@
-/* Compare Section */
 .compare {
   position: relative;
   padding: var(--spacing-2xl) 0;
@@ -19,9 +18,8 @@
   overflow: visible;
 }
 
-/* Green background with image - full section */
 .compare-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -30,7 +28,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--secondary-color);
-  background-image: url('../images/BG.png');
+  background-image: url("../images/BG.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -65,6 +63,7 @@
   gap: 8px;
   margin-bottom: var(--spacing-lg);
   z-index: 2;
+  font-size: 20px;
 }
 
 .compare-badge .checkmark-icon {
@@ -76,7 +75,7 @@
 
 .compare-badge span {
   color: var(--primary-color);
-  font-size: var(--font-size-base);
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -92,17 +91,17 @@
 
 .compare-description {
   color: #ffffff;
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-2xl);
-  max-width: 550px;
+  font-size: var(--font-size-2xl);
+  margin-bottom: 40px;
+  max-width: 965px;
   line-height: 1.6;
   z-index: 2;
 }
 
 .compare-card {
   background-color: #ffffff;
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-2xl);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
   max-width: 1200px;
   width: 100%;
   box-shadow: var(--shadow-lg);
@@ -111,21 +110,24 @@
   margin-top: var(--spacing-xl);
   overflow: visible;
   min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .compare-card-title {
   font-size: var(--font-size-2xl);
   font-weight: 400;
-  color: var(--text-color);
-  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
   text-align: left;
 }
 
 .compare-table-wrapper {
   overflow-x: auto;
   margin-bottom: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
   width: 100%;
-  min-height: 200px;
 }
 
 .compare-table-wrapper table {
@@ -167,7 +169,7 @@
   padding: var(--spacing-md);
   border-bottom: 1px solid var(--border-color);
   color: #1e293b !important;
-  font-size: var(--font-size-base);
+  font-size: 14px;
   vertical-align: middle;
   display: table-cell !important;
   visibility: visible !important;
@@ -215,11 +217,15 @@
 }
 
 .compare-advantage {
-  background: linear-gradient(180deg, rgba(161, 80, 227, 0.58) 0%, rgba(0, 153, 181, 0.2) 100%);
+  background: linear-gradient(
+    180deg,
+    #e7cffbd0 0%,
+    hsla(189, 100%, 97%, 0.906) 100%
+  );
   padding: var(--spacing-lg);
   border-radius: var(--border-radius);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
 }
@@ -244,70 +250,4 @@
   line-height: 1.6;
   margin: 0;
   text-align: left;
-}
-
-/* Responsive Design */
-@media (min-width: 1921px) {
-  .compare-wrapper::before {
-    background-size: 130% auto;
-  }
-}
-
-@media (min-width: 1441px) and (max-width: 1920px) {
-  .compare-wrapper::before {
-    background-size: 140% auto;
-  }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-  .compare-wrapper::before {
-    background-size: 150% auto;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .compare-wrapper::before {
-    background-size: 160% auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .compare-wrapper::before {
-    background-size: 170% auto;
-  }
-
-  .compare-title {
-    font-size: var(--font-size-3xl);
-    padding: 0 var(--spacing-md);
-  }
-
-  .compare-description {
-    font-size: var(--font-size-base);
-    padding: 0 var(--spacing-md);
-  }
-
-  .compare-card {
-    padding: var(--spacing-lg);
-    margin: var(--spacing-lg) var(--spacing-md);
-  }
-
-  .compare-table {
-    font-size: var(--font-size-sm);
-  }
-
-  .compare-table th,
-  .compare-table td {
-    padding: var(--spacing-sm);
-  }
-
-  .compare-table th:last-child,
-  .compare-table td:last-child {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .compare-wrapper::before {
-    background-size: 200% auto;
-  }
 }
