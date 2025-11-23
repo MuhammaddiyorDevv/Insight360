@@ -14,17 +14,22 @@
   justify-content: space-between;
   position: relative;
 }
-.hero-title {
-  font-size: 70px;
-  font-weight: 400;
-  color: var(--primary-color);
-}
 
-.hero-right-content {
+.hero-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 }
+
+.hero-title {
+  font-size: 72px !important;
+  font-weight: 400;
+  color: var(--primary-color);
+  line-height: 100% !important;
+  text-align: left;
+  width: 100%;
+}
+
 .hero-button-left {
   background: #ffffff;
   padding: 12px 24px;
@@ -45,22 +50,20 @@
   color: white;
 }
 .hero-btn-wrapper {
-  border: 2px solid white;
+  border: none;
   border-radius: 8px;
 }
 .btn-mid-border {
-  border: 2px solid #e7fff4;
+  border: none;
   border-radius: 8px;
-}
-.hero-button-right:hover {
-  background: var(--primary-color);
-  color: #ffffff;
 }
 
 .hero-buttons {
   margin-top: 24px;
   display: flex;
   gap: 10px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .hero-banner {
@@ -106,123 +109,223 @@
 }
 
 .hero-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   position: relative;
   background-image: url("../images/Hero-Img.png");
-  background-size: contain;
+  background-size: 80%;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 663px;
   width: 100%;
+  padding-left: 142px;
+  padding-right: 142px;
+  overflow: visible;
 }
 
-.hero-image > div:not(:first-child) {
-  align-self: flex-start;
-}
-
-.chart-card {
-  align-self: flex-end;
-  width: 268px;
-  background: rgba(255, 255, 255, 0.847);
-  backdrop-filter: blur(3px);
-  border-radius: 20px;
-  padding: 15px;
-  overflow: hidden;
-}
-
-.chart-card::before {
-  content: "";
+.chart-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background-image: url("../images/Hero-Img.png");
-  background-size: cover;
-  background-position: center;
-  filter: blur(20px);
-  opacity: 0.3;
-  z-index: -1;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.chart-top-right {
+  top: 20px;
+  right: 142px;
+  z-index: 10;
+}
+
+.chart-bottom-left {
+  bottom: 20px;
+  left: 142px;
+  min-width: 350px;
+  width: auto;
+  max-width: 420px;
+  z-index: 11;
+}
+
+.chart-bottom-right {
+  bottom: 20px;
+  right: 142px;
+  width: 320px;
+  z-index: 12;
+}
+
+/* Energy Reduction Card Styles */
+.chart-container.energy-reduction-card {
+  width: 320px;
+  z-index: 12;
+}
+
+.energy-card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.energy-icon-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #16A34A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.lightning-icon {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.energy-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.energy-percentage {
+  font-size: 36px;
+  font-weight: 600;
+  color: #1f2937;
+  line-height: 1;
+  margin: 0;
+}
+
+.energy-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #4b5563;
+  line-height: 1.4;
+  margin: 0;
 }
 
 .chart-title {
   font-size: 18px;
-  font-weight: 400;
-  color: #000000;
-  margin: 0 0 20px 0;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin: 0 0 16px 0;
   text-align: left;
 }
 
-.donut-chart-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
 .donut-chart {
-  width: 203px;
-  height: 203px;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-90deg);
 }
 
 .donut-ring {
-  opacity: 0.2;
+  stroke: #e8e8e8;
 }
 
 .donut-segment {
-  transition: all 0.3s ease;
+  stroke-linecap: round;
+  opacity: 1;
+  display: block;
 }
 
-.bar-chart-card {
-  background: rgb(249, 249, 249, 0.0001);
-  backdrop-filter: blur(4px);
-  border-radius: 16px;
-  padding: 24px;
+.donut-segment-1 {
+  stroke: #7C51F1;
+}
+
+.donut-segment-2 {
+  stroke: #16A34A;
+}
+
+.donut-segment-3 {
+  stroke: #FBBF24;
+}
+
+/* Bar Chart Styles */
+.bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 6px;
+  height: 250px;
+  width: 100%;
+  min-width: 350px;
+  padding-bottom: 0;
+}
+
+.bar-wrapper {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  justify-content: flex-end;
+  position: relative;
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+.bar-container {
+  width: 100%;
+  max-width: 32px;
+  min-width: 28px;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 0 auto;
+  flex-shrink: 0;
+  border-radius: 8px;
   overflow: hidden;
 }
 
-.bar-chart-card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background-image: url("../images/Hero-Img.png");
-  background-size: cover;
-  background-position: center;
-  filter: blur(20px);
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.bar-chart-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.bar-chart {
+.bar-unfilled {
   width: 100%;
-  height: auto;
+  background: #E5E7EB;
+  opacity: 0.6;
+  position: relative;
+  display: block;
+  flex-shrink: 0;
 }
-@media (max-width: 1280px) {
-  .hero-title {
-    font-size: 48px;
-  }
-  .hero-banner h5 {
-    font-size: 16px;
-  }
-  .hero-description p {
-    font-size: 20px;
-  }
+
+.bar-filled {
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+  transition: height 0.6s ease-in-out;
+  position: relative;
+  display: block;
+  opacity: 1;
+  flex-shrink: 0;
 }
-@media (max-width: 800px) {
-  .hero-wrapper {
-    flex-direction: column;
-    align-items: start;
-  }
+
+.bar-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 8px;
+  flex-shrink: 0;
+  display: block;
+  width: 100%;
 }
+
+/* Line Chart Styles */
+.line-chart {
+  width: 200px;
+  height: 150px;
+  display: block;
+}
+
+.line-chart-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
