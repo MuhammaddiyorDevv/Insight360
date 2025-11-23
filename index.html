@@ -4,34 +4,919 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insight360 Landing Page</title>
-
-    <link rel="stylesheet" href="assets/css/variables.css" />
-    <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
-    <div include-html="components/header.html"></div>
+    <!-- Header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="container">
+          <div class="hamburger-wrapper">
+            <a href="#" class="logo">
+              <img src="assets/images/Logo.svg" alt="Insight360 Logo" />
+            </a>
+            <div class="header-actions">
+              <ul class="nav-menu">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#modules">Module</a></li>
+                <li><a href="#compare">Einzigartig am Markt</a></li>
+                <li>
+                  <a href="#segments">Für wen ist Insight360 die ideale Lösung?</a>
+                </li>
+              </ul>
+              <button class="lang-selector">
+                <img src="assets/images/Language.svg" alt="" />
+                EN
+              </button>
+              <button class="btn btn-primary btn-demo">Demo vereinbaren</button>
+              <img src="assets/images/hamburger.svg" alt="" class="hamburger" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <div include-html="components/hero.html"></div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-wrapper">
+          <div class="hero-content">
+            <h3 class="hero-title">
+              Immobilien verwalten. Energie optimieren. Mit einem Klick.
+            </h3>
+            <div class="hero-buttons">
+              <div class="hero-btn-wrapper">
+                <div class="btn-mid-border">
+                  <a href="#learn-more" class="hero-button-left">Kostenlos testen</a>
+                </div>
+              </div>
+              <div class="hero-btn-wrapper">
+                <div class="btn-mid-border">
+                  <a href="#learn-more" class="hero-button-left">Mehr erfahren</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <div include-html="components/features.html"></div>
+          <div class="hero-right-content">
+            <div class="hero-banner">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="checkmark-icon">
+                <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <h5>Deutschlands smarteste Immobilienplattform</h5>
+            </div>
+            <div class="hero-description">
+              <p>
+                Insight360 vereint Immobilien- und Energieprozesse in einem System:
+                vollständig integriert, modular nutzbar, jederzeit erweiterbar.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    <div include-html="components/modules.html"></div>
+        <div class="hero-image">
+          <!-- Chart 1: Yuqori o'ng - Donut Chart -->
+          <div class="chart-container chart-top-right">
+            <h4 class="chart-title">Gesamtbetriebskosten</h4>
+            <svg class="donut-chart" viewBox="0 0 200 200">
+              <circle class="donut-ring" cx="100" cy="100" r="80" fill="none" stroke="#e0e0e0" stroke-width="20"/>
+              <circle class="donut-segment donut-segment-1" cx="100" cy="100" r="80" fill="none" stroke-width="20" stroke="#7C51F1" stroke-dasharray="167.5 502.65" stroke-dashoffset="0"/>
+              <circle class="donut-segment donut-segment-2" cx="100" cy="100" r="80" fill="none" stroke-width="20" stroke="#16A34A" stroke-dasharray="167.5 502.65" stroke-dashoffset="-167.5"/>
+              <circle class="donut-segment donut-segment-3" cx="100" cy="100" r="80" fill="none" stroke-width="20" stroke="#FBBF24" stroke-dasharray="167.5 502.65" stroke-dashoffset="-335"/>
+            </svg>
+          </div>
 
-    <div include-html="components/compare.html"></div>
+          <!-- Chart 2: Chap past - Bar Chart -->
+          <div class="chart-container chart-bottom-left">
+            <h4 class="chart-title">Monatliche Fertigstellung</h4>
+            <div class="bar-chart" id="monthly-completion-chart" aria-live="polite">
+              <div class="bar-wrapper">
+                <div class="bar-container">
+                  <div class="bar-unfilled" style="height: 27.5%;"></div>
+                  <div class="bar-filled bar-1" style="height: 72.5%; background: #7C51F1;"></div>
+                </div>
+                <span class="bar-label">Nov</span>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar-container">
+                  <div class="bar-unfilled" style="height: 47.5%;"></div>
+                  <div class="bar-filled bar-2" style="height: 52.5%; background: #3B82F6;"></div>
+                </div>
+                <span class="bar-label">Dec</span>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar-container">
+                  <div class="bar-unfilled" style="height: 37.5%;"></div>
+                  <div class="bar-filled bar-3" style="height: 62.5%; background: #06B6D4;"></div>
+                </div>
+                <span class="bar-label">Jan</span>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar-container">
+                  <div class="bar-unfilled" style="height: 52.5%;"></div>
+                  <div class="bar-filled bar-4" style="height: 47.5%; background: #A78BFA;"></div>
+                </div>
+                <span class="bar-label">Feb</span>
+              </div>
+              <div class="bar-wrapper">
+                <div class="bar-container">
+                  <div class="bar-unfilled" style="height: 32.5%;"></div>
+                  <div class="bar-filled bar-5" style="height: 67.5%; background: #6366F1;"></div>
+                </div>
+                <span class="bar-label">Mar</span>
+              </div>
+            </div>
+          </div>
 
-    <div include-html="components/segments.html"></div>
+          <!-- Chart 3: O'ng past - Energy Reduction Card -->
+          <div class="chart-container chart-bottom-right energy-reduction-card">
+            <div class="energy-card-content">
+              <div class="energy-icon-circle">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  class="lightning-icon">
+                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="white" stroke="white" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="energy-card-text">
+                <div class="energy-percentage">23%</div>
+                <div class="energy-description">Reduzierung des Energieverbrauchs um 23%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div include-html="components/testimonials.html"></div>
+    <!-- Features -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>Alles im Blick. Alles im Griff.</h2>
+        <p class="features-subtitle">
+          Entdecken Sie die Vorteile unserer All-in-One-Lösung
+        </p>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="assets/images/Zeitersparnis.svg" alt="Zeitersparnis" />
+            </div>
+            <h3>Zeitersparnis</h3>
+            <p>
+              Automatisierung aller Prozesse von der Zählererfassung bis zur
+              Abrechnung
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="assets/images/Kostenreduktion.svg" alt="Kostenreduktion" />
+            </div>
+            <h3>Kostenreduktion</h3>
+            <p>
+              Optimierung der Betriebskosten durch intelligente Analysen und
+              effiziente Prozesse
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img src="assets/images/Transparenz.svg" alt="Transparenz" />
+            </div>
+            <h3>Transparenz</h3>
+            <p>Volle Transparenz über alle Kosten und Verbräuche in Echtzeit</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="assets/images/Zukunftsfähigkeit.png"
+                alt="Zukunftsfähigkeit"
+              />
+            </div>
+            <h3>Zukunftsfähigkeit</h3>
+            <p>Nachhaltige Lösungen für die Energieeffizienz von morgen</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div include-html="components/contact.html"></div>
+    <!-- Modules -->
+    <section id="modules" class="modules">
+      <div class="container">
+        <h2>Unsere Module - Updated</h2>
+        <p>
+          Wählen Sie genau die Funktionen, die Sie benötigen. Starten Sie mit
+          einzelnen Modulen und erweitern Sie jederzeit.
+        </p>
+        <div class="modules-grid">
+          <div class="module-card">
+            <h3>Immobilienverwaltung</h3>
+            <p>Digitale Verwaltung aller Immobilienprozesse</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">KI-gestützte Risikoanalyse</span>
+              <span class="feature-bubble">Automatische Buchhaltungszuordnung</span>
+              <span class="feature-bubble">Proaktive Aufgabenverwaltung</span>
+              <span class="feature-bubble">DATEV Schnittstelle</span>
+              <span class="feature-bubble">Liquiditätstransparenz</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Mieter- & Nutzerportal</h3>
+            <p>Digitale Kommunikations- und Serviceplattform</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Mieter-App</span>
+              <span class="feature-bubble">Self-Service</span>
+              <span class="feature-bubble">Kommunikation</span>
+              <span class="feature-bubble">Verbrauchsdaten</span>
+              <span class="feature-bubble">Zahlungserinnerung</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Smart Metering</h3>
+            <p>Intelligente Verbrauchserfassung und -analyse</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Digitale Zähler</span>
+              <span class="feature-bubble">EED-konforme Info</span>
+              <span class="feature-bubble">Echtzeit-Messdaten</span>
+              <span class="feature-bubble">Leckagewarnung</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Abrechnung & Controlling</h3>
+            <p>Automatisierte Abrechnungs- und Controlling-Prozesse</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Automatische BK-Abrechnung</span>
+              <span class="feature-bubble">Forecast</span>
+              <span class="feature-bubble">Buchhaltungsintegration</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Stromeinkauf</h3>
+            <p>Optimierte Energiebeschaffung und -nutzung</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Volumenbündelung</span>
+              <span class="feature-bubble">Tarifoptimierung</span>
+              <span class="feature-bubble">Mieterstrom</span>
+              <span class="feature-bubble">Ladestrom</span>
+              <span class="feature-bubble">EEG-konform</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Wechselservice (USP!)</h3>
+            <p>Automatisierter monatlicher Tarifwechsel</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Monatliche Anbieterwechsel-Prüfung</span>
+              <span class="feature-bubble">Vollständige Prozessautomatisierung</span>
+              <span class="feature-bubble">Transparente Tarifauswahl</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Gebäudeautomation (IoT)</h3>
+            <p>Intelligente Gebäudesteuerung und -überwachung</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Licht-, Klima-, Zutrittssteuerung</span>
+              <span class="feature-bubble">Alarmintegration</span>
+              <span class="feature-bubble">KI-Regelung</span>
+              <span class="feature-bubble">Raumautomation</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Energieoptimierung</h3>
+            <p>Datenbasierte Energieeffizienz und Reporting</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">KI-Auswertung</span>
+              <span class="feature-bubble">Digitale Zwillinge</span>
+              <span class="feature-bubble">Maßnahmenplanung</span>
+              <span class="feature-bubble">ISO50001-/ESG-Reporting</span>
+              <span class="feature-bubble">BAFA Förderung möglich</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Banking & Finance Hub</h3>
+            <p>Integriertes MultiBanking mit Echtzeit-Finanzanalyse</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Echtzeit-Zahlungserkennung</span>
+              <span class="feature-bubble">Liquiditätsprognosen</span>
+              <span class="feature-bubble">Automatische DATEV-Integration</span>
+              <span class="feature-bubble">Cashflow-Optimierung</span>
+              <span class="feature-bubble">Multi-Konten Management</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Smart Document Management</h3>
+            <p>Vollautomatisiertes Dokumenten- und Vertragsmanagementsystem</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Automatisches Einlesen und Klassifizieren von Dokumenten</span>
+              <span class="feature-bubble">KI-gestützte Dokumentenanalyse</span>
+              <span class="feature-bubble">Revisionssichere Archivierung</span>
+              <span class="feature-bubble">Automatische Vertragsverwaltung</span>
+              <span class="feature-bubble">Proaktive Fristenverwaltung</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Einstellungen & Schnittstellen</h3>
+            <p>Umfassende Konfiguration und Integration</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Rollen-/Rechteverwaltung</span>
+              <span class="feature-bubble">FinAPI/DATEV-Integration</span>
+              <span class="feature-bubble">DSGVO konform</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Nutzeransichten & App</h3>
+            <p>Personalisierte Dashboards und mobile Nutzung</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">Dashboard je Rolle (Eigentümer, Mieter, Verwalter)</span>
+              <span class="feature-bubble">Responsive App</span>
+              <span class="feature-bubble">Filter und Drilldowns</span>
+            </div>
+          </div>
+          <div class="module-card">
+            <h3>Dashboard</h3>
+            <p>Umfassende Übersicht und Analyse</p>
+            <div class="feature-bubbles">
+              <span class="feature-bubble">KPI-Cockpit</span>
+              <span class="feature-bubble">Portfolioanalyse</span>
+              <span class="feature-bubble">Echtzeit-Reportingn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div include-html="components/newbenchmark.html"></div>
+    <!-- Compare -->
+    <section id="compare" class="compare">
+      <div class="compare-wrapper">
+        <div class="compare-content">
+          <div class="compare-badge">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="checkmark-icon"
+            >
+              <path
+                d="M16.6667 5L7.50004 14.1667L3.33337 10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span>Einzigartig am Markt</span>
+          </div>
 
-    <div include-html="components/footer.html"></div>
+          <h2 class="compare-title">Monatliche Energiekosten-Optimierung</h2>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/forms.js"></script>
+          <p class="compare-description">
+            Als einziger Anbieter prüfen wir monatlich Ihre Energietarife und
+            optimieren diese automatisch – transparent und mit voller Kontrolle.
+          </p>
+
+          <div class="compare-card">
+            <h3 class="compare-card-title">
+              Wettbewerbsvergleich: Automatisierter Wechselservice
+            </h3>
+
+            <div class="compare-table-wrapper">
+              <table class="compare-table">
+                <thead>
+                  <tr>
+                    <th>Anbieter</th>
+                    <th>Autom. Wechsel</th>
+                    <th>Monatlich geprüft</th>
+                    <th>Erfolgsbasiert</th>
+                    <th>Nutzer</th>
+                    <th>Bewertung</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Insight360</td>
+                    <td>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="checkmark-icon"
+                      >
+                        <path
+                          d="M16.6667 5L7.50004 14.1667L3.33337 10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </td>
+                    <td>
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="checkmark-icon"
+                      >
+                        <path
+                          d="M16.6667 5L7.50004 14.1667L3.33337 10"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </td>
+                    <td>kostenlos/geplant</td>
+                    <td>-</td>
+                    <td>
+                      <span class="sparkle-icon">✨</span>
+                      ganzheitlich
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="compare-advantage">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="advantage-checkmark"
+              >
+                <path
+                  d="M33.3333 10L15 28.3333L6.66667 20"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <div class="advantage-text">
+                <p class="advantage-line1">
+                  Insight360 Vorteil: Als einziger Anbieter bieten wir eine
+                  monatliche Wechselprüfung, automatisiert integriert ins
+                  Energie-Dashboard,
+                </p>
+                <p class="advantage-line2">
+                  voll transparent und mit Opt-in-Freigabe pro Wechsel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Segments -->
+    <section id="segments" class="segments">
+      <div class="segments-container">
+        <div class="segments-content">
+          <div class="container">
+            <div class="segment-head">
+              <h2>Für wen ist Insight360 die ideale Lösung?</h2>
+              <p class="segments-subtitle">
+                Maßgeschneiderte Funktionen für unterschiedliche Anforderungen
+              </p>
+            </div>
+            <div class="segments-grid">
+              <div class="segment-card">
+                <div class="segment-image">
+                  <img
+                    src="assets/images/PrivateEigentümer.png"
+                    alt="Private Eigentümer"
+                  />
+                </div>
+                <div class="segment-content">
+                  <h3>Private Eigentümer</h3>
+                  <p class="segment-tagline">Verwalten statt verzetteln.</p>
+                  <p class="segment-description">
+                    Alles digital, übersichtlich & rechtssicher.
+                  </p>
+                  <button class="segment-btn">
+                    Jetzt 30 Tage kostenlos testen
+                  </button>
+                </div>
+              </div>
+              <div class="segment-card">
+                <div class="segment-image">
+                  <img
+                    src="assets/images/Hausverwaltungen.png"
+                    alt="Hausverwaltungen"
+                  />
+                </div>
+                <div class="segment-content">
+                  <h3>Hausverwaltungen</h3>
+                  <p class="segment-tagline">Maximale Effizienz. Null Excel.</p>
+                  <p class="segment-description">
+                    Volle Automatisierung vom Zähler bis zur Bilanz.
+                  </p>
+                  <button class="segment-btn">Prozesse schlanker machen</button>
+                </div>
+              </div>
+              <div class="segment-card">
+                <div class="segment-image">
+                  <img
+                    src="assets/images/Wohnungsbaugesellschaften.png"
+                    alt="Wohnungsbaugesellschaften"
+                  />
+                </div>
+                <div class="segment-content">
+                  <h3>Wohnungsbaugesellschaften</h3>
+                  <p class="segment-tagline">Ihre ESG-Ziele, unsere KI.</p>
+                  <p class="segment-description">
+                    Insight360 zeigt CO2, Verbrauch & Sanierungspotenzial.
+                  </p>
+                  <button class="segment-btn">
+                    Individuelle Beratung vereinbaren
+                  </button>
+                </div>
+              </div>
+              <div class="segment-card">
+                <div class="segment-image">
+                  <img src="assets/images/Private.png" alt="Private Eigentümer" />
+                </div>
+                <div class="segment-content">
+                  <h3>Private Eigentümer</h3>
+                  <p class="segment-tagline">Verwalten statt verzetteln.</p>
+                  <p class="segment-description">
+                    Alles digital, übersichtlich & rechtssicher.
+                  </p>
+                  <button class="segment-btn">IoT-Modul freischalten</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+      <div class="container">
+        <div class="testimonial-head">
+          <h2 class="testimonial-title">Das sagen unsere Kunden</h2>
+          <p class="testimonial-info">Erfahrungen aus der Praxis</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="card-head">
+              <div class="card-logo">
+                <p>TS</p>
+              </div>
+              <div class="card-user">
+                <p class="card-name">Thomas Schmidt</p>
+                <p class="card-info">
+                  Geschäftsführer, Hausverwaltung Schmidt GmbH
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+            </div>
+            <p class="testimonial-desc">
+              "Mit Insight360 sparen wir wöchentlich 15 Arbeitsstunden bei der
+              Nebenkostenabrechnung. Die automatisierte Energietarifoptimierung
+              bringt unseren Kunden durchschnittlich 12% Ersparnis."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="card-head">
+              <div class="card-logo">
+                <p>TS</p>
+              </div>
+              <div class="card-user">
+                <p class="card-name">Thomas Schmidt</p>
+                <p class="card-info">
+                  Geschäftsführer, Hausverwaltung Schmidt GmbH
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+            </div>
+            <p class="testimonial-desc">
+              "Mit Insight360 sparen wir wöchentlich 15 Arbeitsstunden bei der
+              Nebenkostenabrechnung. Die automatisierte Energietarifoptimierung
+              bringt unseren Kunden durchschnittlich 12% Ersparnis."
+            </p>
+          </div>
+          <div class="testimonial-card">
+            <div class="card-head">
+              <div class="card-logo">
+                <p>TS</p>
+              </div>
+              <div class="card-user">
+                <p class="card-name">Thomas Schmidt</p>
+                <p class="card-info">
+                  Geschäftsführer, Hausverwaltung Schmidt GmbH
+                </p>
+              </div>
+            </div>
+            <div>
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+              <img src="assets/images/star.svg" alt="" />
+            </div>
+            <p class="testimonial-desc">
+              "Mit Insight360 sparen wir wöchentlich 15 Arbeitsstunden bei der
+              Nebenkostenabrechnung. Die automatisierte Energietarifoptimierung
+              bringt unseren Kunden durchschnittlich 12% Ersparnis."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container contact-section">
+        <h2>Kontakt</h2>
+        <p class="contact-description">Hinterlassen Sie Ihre Kontakte und wir werden uns bald mit Ihnen in Verbindung setzen, um die besten Funktionen unseres
+        Produkts anzubieten</p>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Ihr Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Ihr E-mail" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Betreff" required />
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" name="phone" placeholder="Telefon" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="company" name="company" placeholder="Unternehmen" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Nachricht" required></textarea>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary">Nachricht senden</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- New Benchmark -->
+    <section class="benchmark-section">
+      <div class="container">
+        <div class="benchmark-wrapper">
+          <div class="benchmark-container">
+            <h1 class="benchmark-title">Bereit für die neue Benchmark?</h1>
+
+            <p class="benchmark-subtitle">
+              Digitalisieren Sie Ihr Immobilien- und Energiemanagement mit
+              Insight360 und senken Sie dauerhaft Ihre Kosten.
+            </p>
+
+            <div class="benchmark-buttons">
+              <button class="btn btn-primary">Kostenlos testen</button>
+              <button class="btn btn-primary">Demo vereinbaren</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-nav">
+            <div class="footer-logo-section">
+              <a href="#" class="footer-logo">
+                <img src="assets/images/Logo.svg" alt="" />
+              </a>
+              <p class="footer-description">
+                Ihre Plattform für digitales Immobilien- & Energiemanagement
+              </p>
+            </div>
+            <div class="footer-nav-column">
+              <h4 class="footer-nav-title">Produkt</h4>
+              <ul class="footer-nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#modules">Module</a></li>
+                <li><a href="#pricing">Preise</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-column">
+              <h4 class="footer-nav-title">Unternehmen</h4>
+              <ul class="footer-nav-links">
+                <li><a href="#about">Über uns</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#blog">Blog</a></li>
+              </ul>
+            </div>
+            <div class="footer-nav-column">
+              <h4 class="footer-nav-title">Rechtliches</h4>
+              <ul class="footer-nav-links">
+                <li><a href="#privacy">Datenschutz</a></li>
+                <li><a href="#imprint">Impressum</a></li>
+                <li><a href="#terms">AGB</a></li>
+              </ul>
+            </div>
+            <div>
+              <div class="media-column">
+                <div class="footer-nav-colum">
+                  <h4 class="footer-nav-title">Produkt</h4>
+                  <ul class="footer-nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#modules">Module</a></li>
+                    <li><a href="#pricing">Preise</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav-colum">
+                  <h4 class="footer-nav-title">Unternehmen</h4>
+                  <ul class="footer-nav-links">
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                  </ul>
+                </div>
+                <div class="footer-nav-colum">
+                  <h4 class="footer-nav-title">Rechtliches</h4>
+                  <ul class="footer-nav-links">
+                    <li><a href="#privacy">Datenschutz</a></li>
+                    <li><a href="#imprint">Impressum</a></li>
+                    <li><a href="#terms">AGB</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-divider"></div>
+          <div class="footer-copyright">
+            <p>&copy; 2025 Insight360 GmbH. Alle Rechte vorbehalten.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Main JavaScript
+      const monthlyCompletionData = [
+        { label: "Nov", percent: 0.725, color: "#7C51F1" },
+        { label: "Dec", percent: 0.525, color: "#3B82F6" },
+        { label: "Jan", percent: 0.625, color: "#06B6D4" },
+        { label: "Feb", percent: 0.475, color: "#A78BFA" },
+        { label: "Mar", percent: 0.675, color: "#6366F1" },
+      ];
+
+      document.addEventListener("DOMContentLoaded", () => {
+        // Initialize charts after components are loaded
+        setTimeout(() => {
+          initDonutChart();
+          initBarChart();
+        }, 500);
+
+        // Contact form handler
+        const contactForm = document.getElementById("contactForm");
+        if (contactForm) {
+          contactForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const data = {
+              name: formData.get("name"),
+              email: formData.get("email"),
+              message: formData.get("message"),
+            };
+
+            try {
+              console.log("Form submitted:", data);
+              alert("Thank you for your message! We'll get back to you soon.");
+              contactForm.reset();
+            } catch (error) {
+              console.error("Error submitting form:", error);
+              alert("There was an error submitting your message. Please try again.");
+            }
+          });
+        }
+      });
+
+      function initDonutChart() {
+        const segment1 = document.querySelector('.donut-segment-1');
+        const segment2 = document.querySelector('.donut-segment-2');
+        const segment3 = document.querySelector('.donut-segment-3');
+
+        if (!segment1 || !segment2 || !segment3) {
+          setTimeout(initDonutChart, 200);
+          return;
+        }
+
+        const radius = 80;
+        const circumference = 2 * Math.PI * radius;
+        const segmentPercent = 1 / 3;
+        const segmentLength = circumference * segmentPercent;
+        
+        segment1.style.opacity = '1';
+        segment1.style.visibility = 'visible';
+        segment2.style.opacity = '1';
+        segment2.style.visibility = 'visible';
+        segment3.style.opacity = '1';
+        segment3.style.visibility = 'visible';
+        
+        segment1.setAttribute('stroke-dasharray', `${segmentLength} ${circumference}`);
+        segment1.setAttribute('stroke-dashoffset', 0);
+        segment1.setAttribute('stroke', '#7C51F1');
+        
+        segment2.setAttribute('stroke-dasharray', `${segmentLength} ${circumference}`);
+        segment2.setAttribute('stroke-dashoffset', -segmentLength);
+        segment2.setAttribute('stroke', '#16A34A');
+        
+        segment3.setAttribute('stroke-dasharray', `${segmentLength} ${circumference}`);
+        segment3.setAttribute('stroke-dashoffset', -(segmentLength * 2));
+        segment3.setAttribute('stroke', '#FBBF24');
+      }
+
+      function initBarChart() {
+        const chartEl = document.querySelector('#monthly-completion-chart');
+
+        if (!chartEl) {
+          setTimeout(initBarChart, 200);
+          return;
+        }
+
+        const existingWrappers = Array.from(chartEl.querySelectorAll('.bar-wrapper'));
+
+        monthlyCompletionData.forEach((item, index) => {
+          let wrapper = existingWrappers[index];
+
+          if (!wrapper) {
+            wrapper = document.createElement('div');
+            wrapper.className = 'bar-wrapper';
+            chartEl.appendChild(wrapper);
+          }
+
+          let container = wrapper.querySelector('.bar-container');
+          if (!container) {
+            container = document.createElement('div');
+            container.className = 'bar-container';
+            wrapper.insertBefore(container, wrapper.firstChild);
+          }
+
+          let unfilled = container.querySelector('.bar-unfilled');
+          if (!unfilled) {
+            unfilled = document.createElement('div');
+            unfilled.className = 'bar-unfilled';
+            container.insertBefore(unfilled, container.firstChild);
+          }
+
+          let filled = container.querySelector('.bar-filled');
+          if (!filled) {
+            filled = document.createElement('div');
+            filled.className = 'bar-filled';
+            container.appendChild(filled);
+          }
+
+          filled.className = `bar-filled bar-${index + 1}`;
+          const filledHeight = Math.max(0, Math.min(100, item.percent * 100));
+          const unfilledHeight = Math.max(0, 100 - filledHeight);
+          filled.style.height = `${filledHeight}%`;
+          filled.style.background = item.color;
+          unfilled.style.height = `${unfilledHeight}%`;
+
+          let label = wrapper.querySelector('.bar-label');
+          if (!label) {
+            label = document.createElement('span');
+            label.className = 'bar-label';
+            wrapper.appendChild(label);
+          }
+          label.textContent = item.label;
+        });
+
+        if (existingWrappers.length > monthlyCompletionData.length) {
+          existingWrappers
+            .slice(monthlyCompletionData.length)
+            .forEach((wrapper) => wrapper.remove());
+        }
+      }
+    </script>
   </body>
 </html>
