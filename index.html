@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="assets/images/Untitled-1.png" />    <title>Insight360 Landing Page</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/Untitled-1.png" />
+    <title>Insight360 Landing Page</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -80,14 +81,12 @@
           <div class="hero-buttons">
             <div class="hero-btn-wrapper">
               <div class="btn-mid-border">
-                <a href="#learn-more" class="hero-button-left"
-                  >Kostenlos testen</a
-                >
+                <a href="#contact" class="hero-button-left">Kostenlos testen</a>
               </div>
             </div>
             <div class="hero-btn-wrapper">
               <div class="btn-mid-border">
-                <a href="#learn-more" class="hero-button-left">Mehr erfahren</a>
+                <a href="#contact" class="hero-button-left">Mehr erfahren</a>
               </div>
             </div>
           </div>
@@ -154,7 +153,11 @@
                   <div class="bar-unfilled" style="height: 27.5%"></div>
                   <div
                     class="bar-filled bar-1"
-                    style="height: 72.5%; background: #7c51f1; border-radius: 12px;"
+                    style="
+                      height: 72.5%;
+                      background: #7c51f1;
+                      border-radius: 12px;
+                    "
                   ></div>
                 </div>
                 <span class="bar-label">Nov</span>
@@ -164,7 +167,11 @@
                   <div class="bar-unfilled" style="height: 47.5%"></div>
                   <div
                     class="bar-filled bar-2"
-                    style="height: 52.5%; background: #3b82f6; border-radius: 12px;"
+                    style="
+                      height: 52.5%;
+                      background: #3b82f6;
+                      border-radius: 12px;
+                    "
                   ></div>
                 </div>
                 <span class="bar-label">Dec</span>
@@ -174,7 +181,11 @@
                   <div class="bar-unfilled" style="height: 37.5%"></div>
                   <div
                     class="bar-filled bar-3"
-                    style="height: 62.5%; background: #06b6d4; border-radius: 12px;"
+                    style="
+                      height: 62.5%;
+                      background: #06b6d4;
+                      border-radius: 12px;
+                    "
                   ></div>
                 </div>
                 <span class="bar-label">Jan</span>
@@ -184,7 +195,11 @@
                   <div class="bar-unfilled" style="height: 52.5%"></div>
                   <div
                     class="bar-filled bar-4"
-                    style="height: 47.5%; background: #a78bfa; border-radius: 12px;"
+                    style="
+                      height: 47.5%;
+                      background: #a78bfa;
+                      border-radius: 12px;
+                    "
                   ></div>
                 </div>
                 <span class="bar-label">Feb</span>
@@ -194,7 +209,11 @@
                   <div class="bar-unfilled" style="height: 32.5%"></div>
                   <div
                     class="bar-filled bar-5"
-                    style="height: 67.5%; background: #6366f1; border-radius: 12px;"
+                    style="
+                      height: 67.5%;
+                      background: #6366f1;
+                      border-radius: 12px;
+                    "
                   ></div>
                 </div>
                 <span class="bar-label">Mar</span>
@@ -205,7 +224,7 @@
           <div class="chart-container chart-bottom-right energy-reduction-card">
             <div class="energy-card-content">
               <div class="energy-icon-circle">
-                <img src="/assets/images/EnergyIcon.png" alt="">
+                <img src="/assets/images/EnergyIcon.png" alt="" />
               </div>
               <div class="energy-card-text">
                 <div class="energy-percentage">23%</div>
@@ -818,8 +837,8 @@
             </p>
 
             <div class="benchmark-buttons">
-              <button class="btn btn-primary">Kostenlos testen</button>
-              <button class="btn btn-primary">Demo vereinbaren</button>
+              <a href="#contact" class="btn btn-primary">Kostenlos testen</a>
+              <a href="#contact" class="btn btn-primary">Demo vereinbaren</a>
             </div>
           </div>
         </div>
@@ -902,6 +921,534 @@
     </footer>
 
     <script>
+      // Localization
+      const translations = {
+        de: {
+          // Nav
+          navFeatures: "Features",
+          navModule: "Module",
+          navCompare: "Einzigartig am Markt",
+          navSegments: "Für wen ist Insight360 die ideale Lösung?",
+          btnDemo: "Demo vereinbaren",
+          langSelector: "EN",
+          // Hero
+          heroTitle:
+            "Immobilien verwalten. Energie optimieren. Mit einem Klick.",
+          heroBanner: "Deutschlands smarteste Immobilienplattform",
+          heroDescription:
+            "Insight360 vereint Immobilien- und Energieprozesse in einem System: vollständig integriert, modular nutzbar, jederzeit erweiterbar.",
+          btnKostenlos: "Kostenlos testen",
+          btnMehrErfahren: "Mehr erfahren",
+          chartTitle: "Gesamtbetriebskosten",
+          energyReduction: "Reduzierung des Energieverbrauchs um 23%",
+          // Features
+          featuresTitle: "Alles im Blick. Alles im Griff.",
+          featuresSubtitle:
+            "Entdecken Sie die Vorteile unserer All-in-One-Lösung",
+          // Modules
+          modulesTitle: "Unsere Module - Updated",
+          modulesDescription:
+            "Modular aufgebaut, jederzeit erweiterbar: Wählen Sie die Module, die Sie benötigen.",
+          // Compare
+          compareBadge: "Einzigartig am Markt",
+          compareTitle: "Monatliche Energiekosten-Optimierung",
+          compareDescription:
+            "Als einziger Anbieter prüfen wir monatlich Ihre Energietarife und optimieren diese automatisch – transparent und mit voller Kontrolle.",
+          compareCardTitle:
+            "Wettbewerbsvergleich: Automatisierter Wechselservice",
+          compareAdvantage1:
+            "Insight360 Vorteil: Als einziger Anbieter bieten wir eine monatliche Wechselprüfung, automatisiert integriert ins Energie-Dashboard,",
+          compareAdvantage2:
+            "voll transparent und mit Opt-in-Freigabe pro Wechsel.",
+          compareTableAnbieter: "Anbieter",
+          compareTableAutoWechsel: "Autom. Wechsel",
+          compareTableMonatlich: "Monatlich geprüft",
+          compareTableErfolg: "Erfolgsbasiert",
+          compareTableNutzer: "Nutzer",
+          compareTableBewertung: "Bewertung",
+          compareTableInsight360: "Insight360",
+          compareTableKostenlos: "kostenlos/geplant",
+          compareTableGanzheitlich: "ganzheitlich",
+          // Segments
+          segmentsTitle: "Für wen ist Insight360 die ideale Lösung?",
+          segmentsSubtitle:
+            "Maßgeschneiderte Funktionen für unterschiedliche Anforderungen",
+          // Testimonials
+          testimonialsTitle: "Das sagen unsere Kunden",
+          testimonialsInfo: "Erfahrungen aus der Praxis",
+          testimonialName: "Thomas Schmidt",
+          testimonialInfo: "Geschäftsführer, Hausverwaltung Schmidt GmbH",
+          testimonialDesc:
+            "Mit Insight360 sparen wir wöchentlich 15 Arbeitsstunden bei der Nebenkostenabrechnung. Die automatisierte Energietarifoptimierung bringt unseren Kunden durchschnittlich 12% Ersparnis.",
+          // Contact
+          contactTitle: "Kontakt",
+          contactDescription:
+            "Hinterlassen Sie Ihre Kontakte und wir werden uns bald mit Ihnen in Verbindung setzen, um die besten Funktionen unseres Produkts anzubieten",
+          contactName: "Ihr Name",
+          contactEmail: "Ihr E-mail",
+          contactSubject: "Betreff",
+          contactPhone: "Telefon",
+          contactCompany: "Unternehmen",
+          contactMessage: "Nachricht",
+          contactSubmit: "Nachricht senden",
+          // Benchmark
+          benchmarkTitle: "Bereit für die neue Benchmark?",
+          benchmarkSubtitle:
+            "Digitalisieren Sie Ihr Immobilien- und Energiemanagement mit Insight360 und senken Sie dauerhaft Ihre Kosten.",
+          // Footer
+          footerDescription:
+            "Ihre Plattform für digitales Immobilien- & Energiemanagement",
+          footerProdukt: "Produkt",
+          footerUnternehmen: "Unternehmen",
+          footerRechtliches: "Rechtliches",
+          footerCopyright: "© 2025 Insight360 GmbH. Alle Rechte vorbehalten.",
+          footerFeatures: "Features",
+          footerModules: "Module",
+          footerPricing: "Preise",
+          footerAbout: "Über uns",
+          footerContact: "Kontakt",
+          footerBlog: "Blog",
+          footerPrivacy: "Datenschutz",
+          footerImprint: "Impressum",
+          footerTerms: "AGB",
+        },
+        en: {
+          // Nav
+          navFeatures: "Lorem ipsum",
+          navModule: "Lorem ipsum",
+          navCompare: "Lorem ipsum dolor",
+          navSegments: "Lorem ipsum dolor sit amet?",
+          btnDemo: "Lorem ipsum",
+          langSelector: "DE",
+          // Hero
+          heroTitle: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          heroBanner: "Lorem ipsum dolor sit amet",
+          heroDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          btnKostenlos: "Lorem ipsum",
+          btnMehrErfahren: "Lorem ipsum",
+          // Features
+          featuresTitle: "Lorem ipsum dolor",
+          featuresSubtitle:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          // Compare
+          compareCardTitle: "Lorem ipsum dolor sit amet",
+          compareAdvantage1:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          compareAdvantage2:
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          compareTableAnbieter: "Lorem",
+          compareTableAutoWechsel: "Lorem",
+          compareTableMonatlich: "Lorem",
+          compareTableErfolg: "Lorem",
+          compareTableNutzer: "Lorem",
+          compareTableBewertung: "Lorem",
+          compareTableInsight360: "Lorem",
+          compareTableKostenlos: "Lorem",
+          compareTableGanzheitlich: "Lorem",
+          // Testimonials
+          testimonialName: "Lorem Ipsum",
+          testimonialInfo: "Lorem ipsum, Lorem ipsum",
+          testimonialDesc:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          // Contact
+          contactName: "Lorem ipsum",
+          contactEmail: "Lorem ipsum",
+          contactSubject: "Lorem ipsum",
+          contactPhone: "Lorem ipsum",
+          contactCompany: "Lorem ipsum",
+          contactMessage: "Lorem ipsum",
+          contactSubmit: "Lorem ipsum",
+          // Hero
+          chartTitle: "Lorem ipsum",
+          energyReduction: "Lorem ipsum dolor sit amet",
+          // Footer
+          footerFeatures: "Lorem",
+          footerModules: "Lorem",
+          footerPricing: "Lorem",
+          footerAbout: "Lorem",
+          footerContact: "Lorem",
+          footerBlog: "Lorem",
+          footerPrivacy: "Lorem",
+          footerImprint: "Lorem",
+          footerTerms: "Lorem",
+          // Modules
+          modulesTitle: "Lorem ipsum - Updated",
+          modulesDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+          // Compare
+          compareBadge: "Lorem ipsum",
+          compareTitle: "Lorem ipsum dolor sit amet",
+          compareDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          // Segments
+          segmentsTitle: "Lorem ipsum dolor sit amet?",
+          segmentsSubtitle:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          // Testimonials
+          testimonialsTitle: "Lorem ipsum dolor",
+          testimonialsInfo: "Lorem ipsum dolor sit amet",
+          // Contact
+          contactTitle: "Lorem ipsum",
+          contactDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.",
+          // Benchmark
+          benchmarkTitle: "Lorem ipsum dolor sit?",
+          benchmarkSubtitle:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.",
+          // Footer
+          footerDescription:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          footerProdukt: "Lorem ipsum",
+          footerUnternehmen: "Lorem ipsum",
+          footerRechtliches: "Lorem ipsum",
+          footerCopyright: "© 2025 Lorem ipsum. Lorem ipsum dolor.",
+        },
+      };
+
+      let currentLang = "de";
+
+      function changeLanguage(lang) {
+        currentLang = lang;
+        const t = translations[lang];
+
+        // Nav
+        const navFeatures = document.querySelector(
+          '.nav-menu a[href="#features"]'
+        );
+        const navModule = document.querySelector(
+          '.nav-menu a[href="#modules"]'
+        );
+        const navCompare = document.querySelector(
+          '.nav-menu a[href="#compare"]'
+        );
+        const navSegments = document.querySelector(
+          '.nav-menu a[href="#segments"]'
+        );
+        const btnDemo = document.querySelector(".btn-demo");
+        const langSelector = document.querySelector(".lang-selector");
+
+        if (navFeatures) navFeatures.textContent = t.navFeatures;
+        if (navModule) navModule.textContent = t.navModule;
+        if (navCompare) navCompare.textContent = t.navCompare;
+        if (navSegments) navSegments.textContent = t.navSegments;
+        if (btnDemo) btnDemo.textContent = t.btnDemo;
+        if (langSelector)
+          langSelector.innerHTML = `<img src="assets/images/Language.svg" alt="" /> ${t.langSelector}`;
+
+        // Hero
+        const heroTitle = document.querySelector(".hero-title");
+        const heroBanner = document.querySelector(".hero-banner h5");
+        const heroDescription = document.querySelector(".hero-description p");
+        const btnKostenlos = document.querySelector(
+          ".hero-buttons a:first-child"
+        );
+        const btnMehrErfahren = document.querySelector(
+          ".hero-buttons a:last-child"
+        );
+        const chartTitle = document.querySelector(".chart-title");
+        const energyReduction = document.querySelector(".energy-description");
+
+        if (heroTitle) heroTitle.textContent = t.heroTitle;
+        if (heroBanner) heroBanner.textContent = t.heroBanner;
+        if (heroDescription) heroDescription.textContent = t.heroDescription;
+        if (btnKostenlos) btnKostenlos.textContent = t.btnKostenlos;
+        if (btnMehrErfahren) btnMehrErfahren.textContent = t.btnMehrErfahren;
+        if (chartTitle) chartTitle.textContent = t.chartTitle;
+        if (energyReduction) energyReduction.textContent = t.energyReduction;
+
+        // Features
+        const featuresTitle = document.querySelector(".features h2");
+        const featuresSubtitle = document.querySelector(".features-subtitle");
+        const featureCards = document.querySelectorAll(".feature-card");
+
+        if (featuresTitle) featuresTitle.textContent = t.featuresTitle;
+        if (featuresSubtitle) featuresSubtitle.textContent = t.featuresSubtitle;
+
+        // Feature cards
+        if (currentLang === "en") {
+          featureCards.forEach((card) => {
+            const h3 = card.querySelector("h3");
+            const p = card.querySelector("p");
+            if (h3 && !h3.hasAttribute("data-de"))
+              h3.setAttribute("data-de", h3.textContent);
+            if (p && !p.hasAttribute("data-de"))
+              p.setAttribute("data-de", p.textContent);
+            if (h3) h3.textContent = "Lorem ipsum";
+            if (p)
+              p.textContent =
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+          });
+        } else {
+          featureCards.forEach((card) => {
+            const h3 = card.querySelector("h3");
+            const p = card.querySelector("p");
+            if (h3 && h3.hasAttribute("data-de"))
+              h3.textContent = h3.getAttribute("data-de");
+            if (p && p.hasAttribute("data-de"))
+              p.textContent = p.getAttribute("data-de");
+          });
+        }
+
+        // Modules
+        const modulesTitle = document.querySelector(".modules h2");
+        const modulesDescription = document.querySelector(
+          ".modules > .container > p"
+        );
+        const moduleCards = document.querySelectorAll(".module-card");
+
+        if (modulesTitle) modulesTitle.textContent = t.modulesTitle;
+        if (modulesDescription)
+          modulesDescription.textContent = t.modulesDescription;
+
+        // Module cards
+        if (currentLang === "en") {
+          moduleCards.forEach((card) => {
+            const h3 = card.querySelector("h3");
+            const p = card.querySelector("p");
+            const bubbles = card.querySelectorAll(".feature-bubble");
+
+            if (h3 && !h3.hasAttribute("data-de"))
+              h3.setAttribute("data-de", h3.textContent);
+            if (p && !p.hasAttribute("data-de"))
+              p.setAttribute("data-de", p.textContent);
+            bubbles.forEach((bubble) => {
+              if (!bubble.hasAttribute("data-de"))
+                bubble.setAttribute("data-de", bubble.textContent);
+            });
+
+            if (h3) h3.textContent = "Lorem ipsum";
+            if (p) p.textContent = "Lorem ipsum dolor sit amet.";
+            bubbles.forEach((bubble) => {
+              bubble.textContent = "Lorem ipsum";
+            });
+          });
+        } else {
+          moduleCards.forEach((card) => {
+            const h3 = card.querySelector("h3");
+            const p = card.querySelector("p");
+            const bubbles = card.querySelectorAll(".feature-bubble");
+
+            if (h3 && h3.hasAttribute("data-de"))
+              h3.textContent = h3.getAttribute("data-de");
+            if (p && p.hasAttribute("data-de"))
+              p.textContent = p.getAttribute("data-de");
+            bubbles.forEach((bubble) => {
+              if (bubble.hasAttribute("data-de"))
+                bubble.textContent = bubble.getAttribute("data-de");
+            });
+          });
+        }
+
+        // Compare
+        const compareBadge = document.querySelector(".compare-badge span");
+        const compareTitle = document.querySelector(".compare-title");
+        const compareDescription = document.querySelector(
+          ".compare-description"
+        );
+        const compareCardTitle = document.querySelector(".compare-card-title");
+        const compareAdvantage1 = document.querySelector(".advantage-line1");
+        const compareAdvantage2 = document.querySelector(".advantage-line2");
+        const compareTableHeaders =
+          document.querySelectorAll(".compare-table th");
+        const compareTableCells = document.querySelectorAll(
+          ".compare-table td[data-label]"
+        );
+
+        if (compareBadge) compareBadge.textContent = t.compareBadge;
+        if (compareTitle) compareTitle.textContent = t.compareTitle;
+        if (compareDescription)
+          compareDescription.textContent = t.compareDescription;
+        if (compareCardTitle) compareCardTitle.textContent = t.compareCardTitle;
+        if (compareAdvantage1)
+          compareAdvantage1.textContent = t.compareAdvantage1;
+        if (compareAdvantage2)
+          compareAdvantage2.textContent = t.compareAdvantage2;
+
+        // Compare table
+        if (compareTableHeaders.length > 0) {
+          const headers = [
+            "compareTableAnbieter",
+            "compareTableAutoWechsel",
+            "compareTableMonatlich",
+            "compareTableErfolg",
+            "compareTableNutzer",
+            "compareTableBewertung",
+          ];
+          compareTableHeaders.forEach((th, index) => {
+            if (t[headers[index]]) th.textContent = t[headers[index]];
+          });
+        }
+
+        // Compare table cells
+        compareTableCells.forEach((td) => {
+          const label = td.getAttribute("data-label");
+          if (label === "Anbieter" && td.textContent.trim() === "Insight360") {
+            td.textContent = t.compareTableInsight360;
+          } else if (
+            label === "Erfolgsbasiert" &&
+            td.textContent.includes("kostenlos")
+          ) {
+            td.textContent = t.compareTableKostenlos;
+          } else if (
+            label === "Bewertung" &&
+            td.textContent.includes("ganzheitlich")
+          ) {
+            td.innerHTML = `<span class="sparkle-icon">✨</span> ${t.compareTableGanzheitlich}`;
+          }
+        });
+
+        // Segments
+        const segmentsTitle = document.querySelector(".segments h2");
+        const segmentsSubtitle = document.querySelector(".segments-subtitle");
+        const segmentCards = document.querySelectorAll(".segment-card");
+
+        if (segmentsTitle) segmentsTitle.textContent = t.segmentsTitle;
+        if (segmentsSubtitle) segmentsSubtitle.textContent = t.segmentsSubtitle;
+
+        // Segment cards
+        if (currentLang === "en") {
+          segmentCards.forEach((card) => {
+            const h3 = card.querySelector("h3");
+            const tagline = card.querySelector(".segment-tagline");
+            const description = card.querySelector(".segment-description");
+            const btn = card.querySelector(".segment-btn");
+
+            if (h3 && !h3.hasAttribute("data-de"))
+              h3.setAttribute("data-de", h3.textContent);
+            if (tagline && !tagline.hasAttribute("data-de"))
+              tagline.setAttribute("data-de", tagline.textContent);
+            if (description && !description.hasAttribute("data-de"))
+              description.setAttribute("data-de", description.textContent);
+            if (btn && !btn.hasAttribute("data-de"))
+              btn.setAttribute("data-de", btn.textContent);
+
+            if (h3) h3.textContent = "Lorem ipsum";
+            if (tagline) tagline.textContent = "Lorem ipsum dolor.";
+            if (description)
+              description.textContent = "Lorem ipsum dolor sit amet.";
+            if (btn) btn.textContent = "Lorem ipsum";
+          });
+        } else {
+          segmentCards.forEach((card) => {
+            const h3 = card.querySelector("h3");
+            const tagline = card.querySelector(".segment-tagline");
+            const description = card.querySelector(".segment-description");
+            const btn = card.querySelector(".segment-btn");
+
+            if (h3 && h3.hasAttribute("data-de"))
+              h3.textContent = h3.getAttribute("data-de");
+            if (tagline && tagline.hasAttribute("data-de"))
+              tagline.textContent = tagline.getAttribute("data-de");
+            if (description && description.hasAttribute("data-de"))
+              description.textContent = description.getAttribute("data-de");
+            if (btn && btn.hasAttribute("data-de"))
+              btn.textContent = btn.getAttribute("data-de");
+          });
+        }
+
+        // Testimonials
+        const testimonialsTitle = document.querySelector(".testimonial-title");
+        const testimonialsInfo = document.querySelector(".testimonial-info");
+        const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+        if (testimonialsTitle)
+          testimonialsTitle.textContent = t.testimonialsTitle;
+        if (testimonialsInfo) testimonialsInfo.textContent = t.testimonialsInfo;
+
+        // Testimonial cards
+        testimonialCards.forEach((card) => {
+          const name = card.querySelector(".card-name");
+          const info = card.querySelector(".card-info");
+          const desc = card.querySelector(".testimonial-desc");
+
+          if (name) name.textContent = t.testimonialName;
+          if (info) info.textContent = t.testimonialInfo;
+          if (desc) desc.textContent = `"${t.testimonialDesc}"`;
+        });
+
+        // Contact
+        const contactTitle = document.querySelector("#contact h2");
+        const contactDescription = document.querySelector(
+          ".contact-description"
+        );
+        const contactNameInput = document.querySelector("#name");
+        const contactEmailInput = document.querySelector("#email");
+        const contactSubjectInput = document.querySelector("#subject");
+        const contactPhoneInput = document.querySelector("#phone");
+        const contactCompanyInput = document.querySelector("#company");
+        const contactMessageInput = document.querySelector("#message");
+        const contactSubmitBtn = document.querySelector(
+          '#contactForm button[type="submit"]'
+        );
+
+        if (contactTitle) contactTitle.textContent = t.contactTitle;
+        if (contactDescription)
+          contactDescription.textContent = t.contactDescription;
+        if (contactNameInput) contactNameInput.placeholder = t.contactName;
+        if (contactEmailInput) contactEmailInput.placeholder = t.contactEmail;
+        if (contactSubjectInput)
+          contactSubjectInput.placeholder = t.contactSubject;
+        if (contactPhoneInput) contactPhoneInput.placeholder = t.contactPhone;
+        if (contactCompanyInput)
+          contactCompanyInput.placeholder = t.contactCompany;
+        if (contactMessageInput)
+          contactMessageInput.placeholder = t.contactMessage;
+        if (contactSubmitBtn) contactSubmitBtn.textContent = t.contactSubmit;
+
+        // Benchmark
+        const benchmarkTitle = document.querySelector(".benchmark-title");
+        const benchmarkSubtitle = document.querySelector(".benchmark-subtitle");
+        const benchmarkButtons = document.querySelectorAll(
+          ".benchmark-buttons a"
+        );
+
+        if (benchmarkTitle) benchmarkTitle.textContent = t.benchmarkTitle;
+        if (benchmarkSubtitle)
+          benchmarkSubtitle.textContent = t.benchmarkSubtitle;
+        if (benchmarkButtons.length > 0) {
+          benchmarkButtons[0].textContent = t.btnKostenlos;
+          if (benchmarkButtons.length > 1)
+            benchmarkButtons[1].textContent = t.btnDemo;
+        }
+
+        // Footer
+        const footerDescription = document.querySelector(".footer-description");
+        const footerProdukt = document.querySelectorAll(".footer-nav-title")[0];
+        const footerUnternehmen =
+          document.querySelectorAll(".footer-nav-title")[1];
+        const footerRechtliches =
+          document.querySelectorAll(".footer-nav-title")[2];
+        const footerCopyright = document.querySelector(".footer-copyright p");
+        const footerLinks = document.querySelectorAll(".footer-nav-links a");
+
+        if (footerDescription)
+          footerDescription.textContent = t.footerDescription;
+        if (footerProdukt) footerProdukt.textContent = t.footerProdukt;
+        if (footerUnternehmen)
+          footerUnternehmen.textContent = t.footerUnternehmen;
+        if (footerRechtliches)
+          footerRechtliches.textContent = t.footerRechtliches;
+        if (footerCopyright) footerCopyright.textContent = t.footerCopyright;
+
+        // Footer links
+        footerLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (href === "#features") link.textContent = t.footerFeatures;
+          else if (href === "#modules") link.textContent = t.footerModules;
+          else if (href === "#pricing") link.textContent = t.footerPricing;
+          else if (href === "#about") link.textContent = t.footerAbout;
+          else if (href === "#contact") link.textContent = t.footerContact;
+          else if (href === "#blog") link.textContent = t.footerBlog;
+          else if (href === "#privacy") link.textContent = t.footerPrivacy;
+          else if (href === "#imprint") link.textContent = t.footerImprint;
+          else if (href === "#terms") link.textContent = t.footerTerms;
+        });
+
+        // Update HTML lang attribute
+        document.documentElement.lang = lang;
+      }
+
       const monthlyCompletionData = [
         { label: "Nov", percent: 0.725, color: "#7C51F1" },
         { label: "Dec", percent: 0.525, color: "#3B82F6" },
@@ -911,6 +1458,14 @@
       ];
 
       document.addEventListener("DOMContentLoaded", () => {
+        // Language selector
+        const langSelector = document.querySelector(".lang-selector");
+        if (langSelector) {
+          langSelector.addEventListener("click", () => {
+            const newLang = currentLang === "de" ? "en" : "de";
+            changeLanguage(newLang);
+          });
+        }
         setTimeout(() => {
           initDonutChart();
           initBarChart();

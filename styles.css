@@ -45,6 +45,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-base);
@@ -69,6 +73,7 @@ body {
   color: var(--secondary-color);
   background-color: transparent;
   font-size: var(--font-size-base);
+  text-decoration: none;
 }
 
 .btn-primary {
